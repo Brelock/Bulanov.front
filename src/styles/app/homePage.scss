@@ -1,0 +1,425 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	background-color: $bgSecondaryColor;
+}
+
+.blockProects{
+	background-color: $bgSecondaryColor;
+	.centerBlock{
+		max-width: 1280px;
+	}
+
+	.titleProects{
+		letter-spacing: 3px;
+		padding-top: 75px;
+		text-transform: uppercase;
+		color: $primaryColor;
+		position: relative;
+		font-size: 21px;
+		line-height: 25px;
+		&::before{
+			content: " ";
+			width: 50px;
+			height: 2px;
+			background: $primaryColor;
+			position: absolute;
+			z-index: 100;
+			bottom: -5px;
+		}
+	}
+
+	.titleAllProects{
+		padding-top: 75px;
+		color: $primaryColor;
+		font-size: 21px;
+		line-height: 25px;
+	}
+	.topBlockProects{
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.btm_all_proects{
+	img {
+	width: 24px !important;
+ }
+}
+.proectGalerey{
+	box-sizing: border-box;
+	flex-shrink: 0;
+	padding-top: 30px;
+	padding-left: 0;
+    padding-bottom: 80px;
+	display: flex;
+	flex-shrink: 1;
+	.block_1_Yabloki, .block_2_Yabloki, 
+	.block_1_Head, .block_2_Head, .block_1_Ashop{
+		padding-top: 20px;
+	}
+	.block_1_Head, .block_2_Head, .block_1_Ashop{
+		padding-left: 20px;
+	}
+	.galereyLeftBlock{
+		width: 32.3%;
+		padding-left: 0;
+		display: flex;
+		flex-direction: column;
+		.block_1_Yabloki {
+			position: relative;
+			&::before{
+				content: "";
+				width: 100%;
+				height: 50px;
+				position: absolute;
+				bottom: 0;
+				background: rgba(0, 0, 0, 0.5) ;	
+			}
+		    span{
+				position: absolute;
+				color: #fff;
+				bottom: 13px;
+				font-size: 18px;
+				left: 10px;
+
+				font-weight: 300;
+				letter-spacing: 2px;
+
+			}
+		}
+	}
+
+	.bg_a{
+		width: 100%;
+
+		img{
+			opacity: 0;
+			position: absolute;
+			width: 37px;
+			top: 50%;
+			left: 50%;
+			transition: 0.7s;
+		}
+	}
+	.galereyRightBlock, .galereyLeftBlock{
+		width: 67.7%;
+		display: flex;
+		flex-wrap: wrap;
+		.block_1_Yabloki{
+			max-width: 419px;
+		}
+		
+		.block_1_Yabloki, .block_2_Yabloki, 
+		.block_1_Head, .block_2_Head, .block_1_Ashop {
+			position: relative;
+			&::before{
+				content: "";
+				width: 100%;
+				max-height: 50px;
+				height: 100%;
+				position: absolute;
+				bottom: 0;
+				background: rgba(0, 0, 0, 0.5) ;	
+				transition: max-height 0.25s ease-in;
+			}
+			span{
+				position: absolute;
+				color: #fff;
+				bottom: 14px;
+				font-size: 18px;
+				left: 30px;
+				font-weight: 300;
+				letter-spacing: 2px;
+			}
+			&:hover{
+				span{
+					display: none;
+				}
+				.bg_a{
+					img{
+						opacity: 0.7;
+					}
+				}
+				&::before{
+					max-height: 100%;
+				}
+			}
+
+		}
+		.block_2_Head, .block_1_Ashop{
+			img{
+
+				max-width: 414px;
+			}
+			
+		}
+		.fake{
+			display: flex;
+		}
+	}
+}
+.proectGalerey{
+	.galereyLeftBlock{
+		width: 32.3%;
+		.block_1_Yabloki, .block_2_Yabloki{
+			span{
+				left: 13px;
+			}
+		}
+	}
+}
+
+@media (max-width: $containerWidth){
+	.blockProects{
+		.titleProects{
+			font-size: 16px;
+			padding: 30px 0 15px;
+			&::before{
+             bottom: 15px;
+			}
+		}
+		button{
+			.titleAllProects {
+				font-size: 16px;
+				padding: 0;
+			}
+		}
+	}
+	.proectGalerey{
+		display: none;
+	}
+    .btm_all_proects{
+		display: none;
+	}
+}
+
+.scopeBlock{
+	padding-bottom: 15px;
+	display: flex;
+	flex-direction: column-reverse;
+	.scopeBlockL{
+		background-color: $primaryColor;
+		width: 25%;
+		min-width: 100%;
+		min-height: 200px;
+	}
+	
+	.scopeBlockR{
+		position: relative;
+		color: #fff;
+		background-color: $bgHeaderColor;
+		width: 75%;
+		min-width: 100%;
+		min-height: 200px;
+		padding-bottom: 90px;
+		span {
+			color: $primaryColor;
+		}
+		.wrappAll{
+			display: block;
+		}
+		.scopeBlockTitle{
+			position: relative;
+			font-size: 16px;
+			letter-spacing: 3px;
+			line-height: 24px;
+			color: $primaryColor;
+			font-weight: bold;
+			text-transform: uppercase;
+			padding: 20px 0 20px 30px;		
+			&::before{
+				content: " ";
+				width: 35px;
+				height: 2px;
+				position: absolute;
+				left: 30px;
+				background-color: $primaryColor;
+				bottom: 15px;
+			}
+		}
+		.itemIcon{
+	    	min-width: 45px;
+		}
+		.scopeBtn{
+				width: 260px;
+				height: 40px;
+				background-color: $primaryColor;
+				text-align: center;
+				border-radius: 30px;
+				box-shadow: 3px 3px 9px 4px rgb(0, 0, 0);
+				font-size: 14px;
+				margin: 0 auto;
+                button{
+					text-transform: uppercase;				
+					width: 100%;
+					height: 100%;
+				}
+			}	
+		.scopeBlockItem{
+				display: flex;
+				padding: 25px;
+				.itemTitle{
+					padding-left: 20px;
+					margin: auto;
+					margin-left: 0;
+				}
+		}
+	}
+	
+		.scopeBlockImg {
+			position: absolute;
+			max-width: 200px;
+			width: 100%;
+			left: 50%;
+			bottom: 0;
+			transform: translate(-50%, 75%);
+			img {
+			}
+		}
+		
+}
+
+@media (min-width: $containerWidth) {
+	.scopeBlock{
+		padding-bottom: 75px;
+		flex-direction: row;
+		.scopeBlockR, .scopeBlockL{
+			min-width: auto;
+			.scopeBlockItem{
+				padding: 25px 0;
+			}
+			.scopeBtn{
+				margin: 0;
+			}
+		}
+
+		.scopeBlockR{
+			padding-left: 230px;
+			.scopeBlockTitle{
+				padding: 25px 0;
+				&::before{
+					left: 0;
+				}
+			}
+			.wrappAll{
+				display: flex;
+				.wrappRight{
+					padding-left: 10%;
+				}
+			}
+		}
+		.scopeBlockImg {
+			max-width: 347px;
+			left: 0;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			bottom: unset;
+		}
+	}
+}
+
+// 
+
+
+.video-container{
+	max-width: 1299px;
+	max-height: 731px;
+    position: relative;
+    padding-bottom: 42.25%;
+	left: 50%;
+	transform: translate(-50%);
+    height: 0;
+    overflow: hidden;
+	iframe {
+	   position: absolute;
+	   top:0;
+	   left: 0;
+	   width: 100%;
+	   height: 100%;
+	   max-height: 731px;
+	   padding: 0 20px;
+	  }
+}
+
+.Bestseller {
+	max-width: 1299px;
+	position: relative;
+	padding-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	.topBlockBestseller{
+		padding-left: 10px;
+	}
+	.btmBestseller2, .btmBestseller3{
+		padding-left: 15px;
+        .titleBestseller{
+			color: grey;
+		}
+	}
+	.btmBestseller1{
+		background-color: $bgSecondaryColor;
+		color: $primaryColor;
+		position: relative;
+		&::before{
+		  position: absolute;
+		  content: "";
+		  width: 50px;
+		  height: 2px;
+		  background-color: $primaryColor;
+		  left: 0;
+		  bottom: -7px;
+		}
+		.titleBestseller{
+			color: $primaryColor;
+		}
+	}
+	
+	.titleBestseller{
+		font-weight: 700;
+		letter-spacing: 1px;
+		font-size: 13px;
+		text-transform: uppercase;
+	}
+	.btmAbsolut{
+		bottom: 0;
+
+		right: 0;
+		position: absolute;
+		.titleAbsolut{
+			color: $primaryColor;
+			font-size: 14px;
+			img {
+				width: 24px;
+			}
+		}
+	}
+}
+
+
+@media (min-width: $containerWidth){
+	.Bestseller{
+		padding-top: 75px;
+		.titleBestseller{
+			letter-spacing: 3px;
+			font-size: 21px;
+		}
+		.btmAbsolut {
+		  top: o;
+		  bottom: auto;
+		  
+		}
+	}
+	.btmBestseller2, .btmBestseller3{
+		padding-left: 30px;
+        .titleBestseller{
+			color: grey;
+		}
+        
+	}
+}
+
+
+
