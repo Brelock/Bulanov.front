@@ -18,9 +18,16 @@
 //------Partials-----
 @import "app/partials/header";
 @import "app/partials/footer";
-
+@import "app/partials/mixitup";
+@import "app/partials/mixitupPageItem";
 //-----App-----
 @import "app/homePage";
 @import "./app/homePage";
 @import "./app/slider";
-
+@import "./app/portfolio";
+@import "./app/products";
+@import "./app/sales";
+@import "./app/o_nas";
+@import "./app/blog";
+@import "./app/blogItem";
+@import "./app/contact";

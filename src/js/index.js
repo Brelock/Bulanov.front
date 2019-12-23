@@ -154,7 +154,83 @@ $(document).ready(function() {
 
 
 
+	
+	
+	
 	// ===========Initializations=============
+	
+
+	var w = window.innerWidth
+	|| document.documentElement.clientWidth
+	|| document.body.clientWidth;
+	if ( w < 450 ){
+	  $('.slideItem').slick({
+		  slidesToShow: 1,
+		  slidesToScroll: 1,
+		  arrows: false,
+		  fade: true,
+		  asNavFor: '.slideItemVertical'
+		});
+		$('.slideItemVertical').slick({
+		  slidesToShow: 1,
+		  slidesToScroll: 1,
+		  asNavFor: '.slideItem',
+		  dots: true,
+		  centerMode: true,
+		  focusOnSelect: true,
+		  vertical: true,
+		});
+	}
+	
+	
+	var w = window.innerWidth
+	|| document.documentElement.clientWidth
+	|| document.body.clientWidth;
+	if ( w > 550 ){
+	$('.slideItem').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.slideItemVertical'
+	  });
+	  $('.slideItemVertical').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.slideItem',
+		dots: true,
+		centerMode: true,
+		focusOnSelect: true,
+		vertical: true,
+	  });
+	}
+
+	  var w = window.innerWidth
+	  || document.documentElement.clientWidth
+	  || document.body.clientWidth;
+	  if ( w < 550 ){
+		$('.slideItem').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			fade: true,
+			asNavFor: '.slideItemVertical'
+		  });
+		  $('.slideItemVertical').slick({
+			slidesToShow: 2,
+			slidesToScroll: 1,
+			asNavFor: '.slideItem',
+			dots: true,
+			centerMode: true,
+			focusOnSelect: true,
+			vertical: true,
+		  });
+	  }
+
+	
+
+
+
 	var w = window.innerWidth
 	|| document.documentElement.clientWidth
 	|| document.body.clientWidth;
@@ -167,15 +243,9 @@ $(document).ready(function() {
 			cssEase: 'linear'
 		});
 
+
+
 		$('.slide').slick({ 
-			// dots: true,
-			// infinite: true,
-			// speed: 500,
-			// fade: true,
-			// cssEase: 'linear',
-			// column: 2,
-			// slidesToShow: 2,
-			// slidesToScroll: 2,
 			dots: true,
 			infinite: false,
 			speed: 500,
@@ -214,9 +284,14 @@ $(document).ready(function() {
 });
 
 
+var containerEl = document.querySelector('.container');
+var mixer = mixitup(containerEl);
+
 window.onload = function() {
 	console.log('window load')
 	// $('#page-preloader').fadeOut('slow');
 
 	// glob.LazyLoadModule.initLazy('lazyBlock')
 }
+
+

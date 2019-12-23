@@ -1,0 +1,108 @@
+.salesBlock {
+  display: flex;
+  box-sizing: border-box;
+  padding-top: 30px;
+}
+
+.saleCategory {
+  width: 25%;
+}
+
+.salesItemBlock {
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px 0;
+  padding-left: 10px;
+}
+
+.saleItem{
+    padding: 10px;
+    width: 33.3%;
+    color: #fff;
+    letter-spacing: 2px;
+}
+.saleCategoryTitle{
+    color: #fff;
+    background-color: #252525;
+    height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding-left: 30px;
+    line-height: 50px;
+}
+
+.category{
+    background-color: #f2f2f2;
+    width: 100%;
+    ul li {
+        padding: 10px;
+        padding-left: 20px;
+        letter-spacing: 3px;
+        font-weight: 200;
+        a{
+            &:hover{
+                color: $primaryColor;
+            }
+         }
+  }
+}
+
+
+.salesItemButtum{
+    width: 250px;
+    height: 50px;
+    padding-left: 20px;
+}
+
+
+.saleItemTitle{
+ font-size: 14px;
+ padding:   2px 0 2px 0;
+}
+.saleItemSuptitle{
+    font-weight: 100;
+    font-size: 12px;
+    padding:   2px 0 2px 0;
+}
+
+
+@media (max-width:$containerWidthTablet){
+  .salesBlock{
+    flex-direction: column;
+  }
+  .saleCategory{
+    width: 65%;
+  }
+  .salesItemBlock{
+    padding: 30px 0 0 0;
+    width: 100%;
+  }
+}
+
+@media (max-width:500px){
+  .salesItemBlock{
+    padding: 30px 0 0 0;
+    width: 100%;
+  }
+  .saleItem{
+    width: 50%;
+  }
+}
+
+@media (max-width: 414px){
+  .saleCategory{
+    width: 100%;
+  }
+  .salesItemBlock{
+    padding: 30px 0 0 0;
+    width: 100%;
+  }
+  .saleItem{
+    width: 100%;
+  }
+}
+
+
+
+

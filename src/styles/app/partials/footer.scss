@@ -18,11 +18,12 @@
 	.footerBlockTown{
 		.town{
 			font-size: 16px;
-			font-weight: 300;
+			font-weight: 100;
+
 		}
 		.mail{
 			font-size: 16px;
-			font-weight: 300;
+			font-weight: 100;
 		}
 	}
 	.footerBlockTime, .footerBlockPhone, .footerBlockSocial{
@@ -30,6 +31,11 @@
 		.timeWork, .contacktPhone{
 			font-size: 21px;
 		}
+		.timeTitle{
+			font-weight: 100;
+			font-size: 14;
+		}
+
 	}
 	.footerBlockSocial{
 		justify-content: space-around;
@@ -48,18 +54,37 @@
 		}
 	}
 }
-		.bottomFooter{
+      .bottomFooter{
+		  background-color: $bgSecondaryColor;
+		  min-height: 70px;
+		  
+		  display: flex;
+	  }
+		.bottomFooterBlock{
 			font-size: 14px;
 			font-weight: 100;
 			text-align: center;
-			background-color: $bgSecondaryColor;
-			padding: 30px;
-			p{
-				padding-top: 15px;
-				span{
-					font-weight: 900;
-					font-size: 21px;
-					padding-left: 10px;
+			flex-direction: column;
+			justify-content: space-evenly;
+			display: flex;
+			a {
+				color: $footerFontColor;
+				display: flex;
+				flex-direction: column;
+                 align-items: center;
+			}
+			.developedBy{
+				// font-weight: 900;
+				// font-size: 21px;
+				// padding-left: 10px;
+				// text-align: center;
+				align-items: center;
+				display: flex;
+
+				img{
+					margin-left: 10px;
+					width: 20px;
+					height: 20px;
 				}
 			}
 		}
@@ -76,7 +101,9 @@
 	}
 	.footerBlockTown, .footerBlockTime, .footerBlockPhone, .footerBlockSocial {
 		padding: 0 10px ;
-       
+       .titlePhone{
+		   font-weight: 100;
+	   }
 	}
 	.footerBlockSocial{
 		padding-top: 35px;
@@ -88,10 +115,19 @@
 	}
 	}
 
- .bottomFooter{
+ .bottomFooterBlock{
 		 display: flex;
-		 justify-content: space-around;
-		 align-items: baseline;
+		 flex-direction: row;
+		 justify-content: space-between;
+		 align-items: center;
+		 width: 1299px;
 
+         .developedBy{
+
+			 img{
+				 width: 20px;
+				 height: 20px;
+			 }
+		 }
  }
 }

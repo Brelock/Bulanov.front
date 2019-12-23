@@ -50,10 +50,14 @@ body{
 	}
 
 	.titleAllProects{
+		display: flex;
 		padding-top: 75px;
 		color: $primaryColor;
 		font-size: 21px;
 		line-height: 25px;
+		.imgAllProdj{
+			padding-left: 20px;
+		}
 	}
 	.topBlockProects{
 		display: flex;
@@ -76,11 +80,13 @@ body{
 	flex-shrink: 1;
 	.block_1_Yabloki, .block_2_Yabloki, 
 	.block_1_Head, .block_2_Head, .block_1_Ashop{
-		padding-top: 20px;
+		margin-top: 10px;
 	}
+
 	.block_1_Head, .block_2_Head, .block_1_Ashop{
 		padding-left: 20px;
 	}
+	
 	.galereyLeftBlock{
 		width: 32.3%;
 		padding-left: 0;
