@@ -1,801 +1,775 @@
-*{
-	box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-body{
-	background-color: $bgSecondaryColor;
+body {
+  background-color: $bgSecondaryColor;
 }
-.btmAbsolut, .slideshowPrise{
-	display: none;
+.btmAbsolut,
+.slideshowPrise {
+  display: none;
 }
-.slideshowLeft{
-	padding: 10px;
-	color: #fff;
-	.slideshowTitle{
-	  font-weight: bold;
-	  font-size: 14px;
-	  letter-spacing: 2px;
-	  line-height: 18px;
-	}
-	.slideshowSubtitle{
-		padding-top: 5px;
-		font-size: 12px;
-		letter-spacing: 2px;
-		line-height: 15px;
-		font-weight: 300;
-	}
+.slideshowLeft {
+  padding: 10px;
+  color: #fff;
+  .slideshowTitle {
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 18px;
+  }
+  .slideshowSubtitle {
+    padding-top: 5px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 15px;
+    font-weight: 300;
+  }
 }
-.blockProects{
-	background-color: $bgSecondaryColor;
-	.centerBlock{
-		max-width: 1280px;
-	}
-
-	.titleProects{
-		letter-spacing: 3px;
-		padding-top: 75px;
-		text-transform: uppercase;
-		color: $primaryColor;
-		position: relative;
-		font-size: 21px;
-		line-height: 25px;
-		&::before{
-			content: " ";
-			width: 50px;
-			height: 2px;
-			background: $primaryColor;
-			position: absolute;
-			z-index: 100;
-			bottom: -5px;
-		}
-	}
-
-	.titleAllProects{
-		display: flex;
-		padding-top: 75px;
-		color: $primaryColor;
-		font-size: 21px;
-		line-height: 25px;
-		.imgAllProdj{
-			padding-left: 20px;
-		}
-	}
-	.topBlockProects{
-		display: flex;
-		justify-content: space-between;
-	}
-}
-
-.btm_all_proects{
-	img {
-	width: 24px !important;
- }
-}
-.proectGalerey{
-	box-sizing: border-box;
-	flex-shrink: 0;
-	padding-top: 30px;
-	padding-left: 0;
-    padding-bottom: 80px;
-	display: flex;
-	flex-shrink: 1;
-	.block_1_Yabloki, .block_2_Yabloki, 
-	.block_1_Head, .block_2_Head, .block_1_Ashop{
-		margin-top: 10px;
-	}
-
-	.block_1_Head, .block_2_Head, .block_1_Ashop{
-		padding-left: 20px;
-	}
-	
-	.galereyLeftBlock{
-		width: 32.3%;
-		padding-left: 0;
-		display: flex;
-		flex-direction: column;
-		.block_1_Yabloki {
-			position: relative;
-			&::before{
-				content: "";
-				width: 100%;
-				height: 50px;
-				position: absolute;
-				bottom: 0;
-				background: rgba(0, 0, 0, 0.5) ;	
-			}
-		    span{
-				position: absolute;
-				color: #fff;
-				bottom: 13px;
-				font-size: 18px;
-				left: 10px;
-
-				font-weight: 300;
-				letter-spacing: 2px;
-
-			}
-		}
-	}
-
-	.bg_a{
-		width: 100%;
-
-		img{
-			opacity: 0;
-			position: absolute;
-			width: 37px;
-			top: 50%;
-			left: 50%;
-			transition: 0.7s;
-		}
-	}
-	.galereyRightBlock, .galereyLeftBlock{
-		width: 67.7%;
-		display: flex;
-		flex-wrap: wrap;
-		.block_1_Yabloki{
-			max-width: 419px;
-		}
-		
-		.block_1_Yabloki, .block_2_Yabloki, 
-		.block_1_Head, .block_2_Head, .block_1_Ashop {
-			position: relative;
-			&::before{
-				content: "";
-				width: 100%;
-				max-height: 50px;
-				height: 100%;
-				position: absolute;
-				bottom: 0;
-				background: rgba(0, 0, 0, 0.5) ;	
-				transition: max-height 0.25s ease-in;
-			}
-			span{
-				position: absolute;
-				color: #fff;
-				bottom: 14px;
-				font-size: 18px;
-				left: 30px;
-				font-weight: 300;
-				letter-spacing: 2px;
-			}
-			&:hover{
-				span{
-					display: none;
-				}
-				.bg_a{
-					img{
-						opacity: 0.7;
-					}
-				}
-				&::before{
-					max-height: 100%;
-				}
-			}
-
-		}
-		.block_2_Head, .block_1_Ashop{
-			img{
-
-				max-width: 414px;
-			}
-			
-		}
-		.fake{
-			display: flex;
-		}
-	}
-}
-.proectGalerey{
-	.galereyLeftBlock{
-		width: 32.3%;
-		.block_1_Yabloki, .block_2_Yabloki{
-			span{
-				left: 13px;
-			}
-		}
-	}
-}
-.advantageBlockL{
-	position: relative;
-	.advantageBlockImпGirl{
-		position: absolute;
-		max-width: 148px;
-		width: 100%;
-		left: 50%;
-		bottom: -5px;
-
-		z-index: 2000;
-
-		transform: translate(-50%);
-	}
-}
-
-
-.scopeBlock, .advantageBlock{
-	padding-bottom: 15px;
-	display: flex;
-	flex-direction: column-reverse;
-
-	.scopeBlockL, .advantageBlockL{
-		background-color: $primaryColor;
-		width: 25%;
-		min-width: 100%;
-		min-height: 200px;
-	}
-	
-	.scopeBlockR, .advantageBlockR{
-		position: relative;
-		color: #fff;
-		background-color: $bgHeaderColor;
-		width: 75%;
-		min-width: 100%;
-		min-height: 200px;
-		padding-bottom: 90px;
-		span {
-			color: $primaryColor;
-		}
-		.wrappAll{
-			display: flex;
-			flex-direction: column;
-
-
-		}
-		.scopeBlockTitle, .advantageBlockTitle{
-			position: relative;
-			font-size: 16px;
-			letter-spacing: 3px;
-			line-height: 24px;
-			color: $primaryColor;
-			font-weight: bold;
-			text-transform: uppercase;
-			padding: 20px 0 20px 30px;		
-			&::before{
-				content: " ";
-				width: 35px;
-				height: 2px;
-				position: absolute;
-				left: 30px;
-				background-color: $primaryColor;
-				bottom: 15px;
-			}
-		}
-		.itemIcon{
-	    	min-width: 45px;
-		}
-		.scopeBtn, .advantageBtn{
-				width: 260px;
-				height: 40px;
-				background-color: $primaryColor;
-				text-align: center;
-				border-radius: 30px;
-				box-shadow: 3px 3px 9px 4px rgb(0, 0, 0);
-				font-size: 14px;
-				margin: 0 auto;
-                button{
-					text-transform: uppercase;				
-					width: 100%;
-					height: 100%;
-				}
-			}	
-		.scopeBlockItem, .advantageBlockItem{
-				display: flex;
-				padding: 25px;
-				.itemTitle{
-					padding-left: 20px;
-					margin: auto;
-					margin-left: 0;
-				}
-		}
-	}
-
-
-		.scopeBlockImg{
-			position: absolute;
-			max-width: 200px;
-			width: 100%;
-			left: 50%;
-			bottom: 0;
-			transform: translate(-50%, 75%);
-		}		
-		
-}
-
-
-.video-container{
-	max-width: 1299px;
-	max-height: 731px;
+.blockProects {
+  background-color: $bgSecondaryColor;
+  .titleProects {
+    letter-spacing: 3px;
+    padding-top: 75px;
+    text-transform: uppercase;
+    color: $primaryColor;
     position: relative;
-    padding-bottom: 42.25%;
-	left: 50%;
-	transform: translate(-50%);
-    height: 0;
-    overflow: hidden;
-	iframe {
-	   position: absolute;
-	   top:0;
-	   left: 0;
-	   width: 100%;
-	   height: 100%;
-	   max-height: 731px;
-	   padding: 0 20px;
-	  }
+    font-size: 21px;
+    line-height: 25px;
+    &::before {
+      content: " ";
+      width: 50px;
+      height: 2px;
+      background: $primaryColor;
+      position: absolute;
+      z-index: 100;
+      bottom: -5px;
+    }
+  }
+
+  .titleAllProects {
+    display: flex;
+    padding-top: 75px;
+    color: $primaryColor;
+    font-size: 21px;
+    line-height: 25px;
+    .imgAllProdj {
+      padding-left: 20px;
+    }
+  }
+  .topBlockProects {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.btm_all_proects {
+  img {
+    width: 24px !important;
+  }
+}
+.proectGalerey {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  padding-top: 30px;
+  padding-left: 0;
+  padding-bottom: 80px;
+  display: flex;
+  flex-shrink: 1;
+  .block_1_Yabloki,
+  .block_2_Yabloki,
+  .block_1_Head,
+  .block_2_Head,
+  .block_1_Ashop {
+    margin-top: 10px;
+  }
+
+  .block_1_Head,
+  .block_2_Head,
+  .block_1_Ashop {
+    padding-left: 20px;
+  }
+
+  .galereyLeftBlock {
+    width: 32.3%;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    .block_1_Yabloki {
+      position: relative;
+      &::before {
+        content: "";
+        width: 100%;
+        height: 50px;
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      span {
+        position: absolute;
+        color: #fff;
+        bottom: 13px;
+        font-size: 18px;
+        left: 10px;
+
+        font-weight: 300;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  .bg_a {
+    width: 100%;
+    img {
+      opacity: 0;
+      position: absolute;
+      width: 37px;
+      top: 50%;
+      left: 50%;
+      transition: 0.7s;
+    }
+  }
+  .galereyRightBlock,
+  .galereyLeftBlock {
+    width: 67.7%;
+    display: flex;
+    flex-wrap: wrap;
+    .block_1_Yabloki {
+      max-width: 419px;
+    }
+
+    .block_1_Yabloki,
+    .block_2_Yabloki,
+    .block_1_Head,
+    .block_2_Head,
+    .block_1_Ashop {
+      position: relative;
+      &::before {
+        content: "";
+        width: 100%;
+        max-height: 50px;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        transition: max-height 0.25s ease-in;
+      }
+      span {
+        position: absolute;
+        color: #fff;
+        bottom: 14px;
+        font-size: 18px;
+        left: 30px;
+        font-weight: 300;
+        letter-spacing: 2px;
+      }
+      &:hover {
+        span {
+          display: none;
+        }
+        .bg_a {
+          img {
+            opacity: 0.7;
+          }
+        }
+        &::before {
+          max-height: 100%;
+        }
+      }
+    }
+
+    .block_2_Head,
+    .block_1_Ashop {
+      img {
+        max-width: 414px;
+      }
+    }
+    .fake {
+      display: flex;
+    }
+  }
+}
+.proectGalerey {
+  .galereyLeftBlock {
+    width: 32.3%;
+    .block_1_Yabloki,
+    .block_2_Yabloki {
+      span {
+        left: 13px;
+      }
+    }
+  }
+}
+.advantageBlockL {
+  position: relative;
+  .advantageBlockImпGirl {
+    position: absolute;
+    max-width: 148px;
+    width: 100%;
+    left: 50%;
+    bottom: -5px;
+
+    z-index: 2000;
+
+    transform: translate(-50%);
+  }
+}
+
+.scopeBlock,
+.advantageBlock {
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column-reverse;
+
+  .scopeBlockL,
+  .advantageBlockL {
+    background-color: $primaryColor;
+    width: 25%;
+    min-width: 100%;
+    min-height: 200px;
+  }
+
+  .scopeBlockR,
+  .advantageBlockR {
+    position: relative;
+    color: #fff;
+    background-color: $bgHeaderColor;
+    width: 75%;
+    min-width: 100%;
+    min-height: 200px;
+    padding-bottom: 90px;
+    span {
+      color: $primaryColor;
+    }
+    .wrappAll {
+      display: flex;
+      flex-direction: column;
+    }
+    .scopeBlockTitle,
+    .advantageBlockTitle {
+      position: relative;
+      font-size: 16px;
+      letter-spacing: 3px;
+      line-height: 24px;
+      color: $primaryColor;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 20px 0 20px 30px;
+      &::before {
+        content: " ";
+        width: 35px;
+        height: 2px;
+        position: absolute;
+        left: 30px;
+        background-color: $primaryColor;
+        bottom: 15px;
+      }
+    }
+    .itemIcon {
+      min-width: 45px;
+    }
+    .scopeBtn,
+    .advantageBtn {
+      width: 260px;
+      height: 40px;
+      background-color: $primaryColor;
+      text-align: center;
+      border-radius: 30px;
+      box-shadow: 3px 3px 9px 4px rgb(0, 0, 0);
+      font-size: 14px;
+      margin: 0 auto;
+      button {
+        text-transform: uppercase;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .scopeBlockItem,
+    .advantageBlockItem {
+      display: flex;
+      padding: 25px;
+      .itemTitle {
+        padding-left: 20px;
+        margin: auto;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .scopeBlockImg {
+    position: absolute;
+    max-width: 200px;
+    width: 100%;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 75%);
+  }
+}
+
+.video-container {
+  max-height: 731px;
+  position: relative;
+  padding-bottom: 42.25%;
+  // left: 50%;
+  // transform: translate(-50%);
+  height: 0;
+  overflow: hidden;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 731px;
+    padding: 0 20px;
+  }
 }
 
 .Bestseller {
-	max-width: 1299px;
-	position: relative;
-	padding: 30px 0 5px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-	.topBlockBestseller{
-		padding-left: 10px;
-	}
-	.btmBestseller2, .btmBestseller3{
-		padding-left: 15px;
-        .titleBestseller{
-			color: grey;
-		}
-	}
-	.btmBestseller1{
-		background-color: $bgSecondaryColor;
-		color: $primaryColor;
-		position: relative;
-		&::before{
-		  position: absolute;
-		  content: "";
-		  width: 50px;
-		  height: 2px;
-		  background-color: $primaryColor;
-		  left: 0;
-		  bottom: -7px;
-		}
-		.titleBestseller{
-			color: $primaryColor;
-		}
-	}
-	
-	.titleBestseller{
-		font-weight: 700;
-		letter-spacing: 1px;
-		font-size: 13px;
-		text-transform: uppercase;
-	}
-	.btmAbsolut{
-		bottom: 0;
+  position: relative;
+  padding: 30px 0 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  .btmBestseller2,
+  .btmBestseller3 {
+    padding-left: 15px;
+    .titleBestseller {
+      color: grey;
+    }
+  }
+  .btmBestseller1 {
+    background-color: $bgSecondaryColor;
+    color: $primaryColor;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 50px;
+      height: 2px;
+      background-color: $primaryColor;
+      left: 0;
+      bottom: -7px;
+    }
+    .titleBestseller {
+      color: $primaryColor;
+    }
+  }
 
-		right: 0;
-		position: absolute;
-		.titleAbsolut{
-			padding-right: 15px;
-			color: $primaryColor;
-			font-size: 14px;
-			img {
-				width: 24px;
-			}
-		}
-	}
+  .titleBestseller {
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+  .btmAbsolut {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    .titleAbsolut {
+      padding-right: 15px;
+      color: $primaryColor;
+      font-size: 14px;
+      img {
+        width: 24px;
+      }
+    }
+  }
 }
 
-.sentence{
-	max-width: 1299px;
-	padding-top: 25px;
-	.sentenceBlock{
-		color: #E8E8E8;
-		padding: 2px;
-		letter-spacing: 1px;
-		img{
-			max-width: 309px;
-			max-height: 309px;
-			width: 100%;
-		}
-		.sentenceBlockAll{
-			display: flex;
-			justify-content: space-between;
-			
-		}
-		.sentenceBlockLeft{
-			padding-left: 10px;
-			opacity: 0,7;
-			
-		}
-		.sentenceTitle{
-			font-size: 14px;	
-			font-weight: 600;	
-			line-height: 18px;
-			
-		}
-		.sentenceSubtitle{
-			font-size: 14px;
-			line-height: 18px;
-			font-weight: 300;
-		}
-		.sentenceBlockRight{
-			margin: auto 0;
-			.slideshowPrise{
-				color: $primaryColor;
-				padding-right: 10px;
-				
-			}
-		}
-	}
+.sentence {
+  padding-top: 25px;
+  .sentenceBlock {
+    color: #e8e8e8;
+    padding: 2px;
+    letter-spacing: 1px;
+    img {
+      max-width: 309px;
+      max-height: 309px;
+      width: 100%;
+    }
+    .sentenceBlockAll {
+      display: flex;
+      justify-content: space-between;
+    }
+    .sentenceBlockLeft {
+      padding-left: 10px;
+      opacity: 0, 7;
+    }
+    .sentenceTitle {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 18px;
+    }
+    .sentenceSubtitle {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 300;
+    }
+    .sentenceBlockRight {
+      margin: auto 0;
+      .slideshowPrise {
+        color: $primaryColor;
+        padding-right: 10px;
+      }
+    }
+  }
 }
 
-.advantageInput{
-	margin: 30px auto;
-	input{
-		border-radius: 15px;
-		background-color: #F2F2F2;
-	}
-	width: 299px;
-	height: 35px;	
+.advantageInput {
+  margin: 30px auto;
+  input {
+    border-radius: 15px;
+    background-color: #f2f2f2;
+  }
+  width: 299px;
+  height: 35px;
 }
 
+.advantList {
+  padding-top: 15px;
+  margin: auto;
+  min-width: 320px;
+  .advantListTitle {
+    padding-left: 10px;
+    color: $primaryColor;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    position: relative;
+    text-transform: uppercase;
 
+    &::before {
+      content: " ";
+      position: absolute;
+      width: 32px;
+      height: 2px;
+      background-color: $primaryColor;
+      bottom: 0;
+    }
+  }
 
+  .advantBlock {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 75px;
+    .advantBlock_1,
+    .advantBlock_2,
+    .advantBlock_3 {
+      position: relative;
+      &::before {
+        content: " ";
+        background-color: #fff;
+        position: absolute;
+        width: 169px;
+        height: 1px;
+        bottom: -7%;
+        left: 50%;
+        transform: translate(-50%);
+      }
+    }
+    .advantBlockIcon {
+      width: 60px;
+      height: 45%;
+      padding-top: 55px;
+      margin: auto;
+    }
+    color: #fff;
+    .advantBlockTitle {
+      padding-top: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 30px;
+      letter-spacing: 2px;
+    }
 
-.advantList{
-	padding-top: 15px;
-	margin: auto;
-	max-width: 1299px;
-	min-width: 320px;
-	.advantListTitle{
-		padding-left: 10px;
-		color: $primaryColor;
-		font-size: 16px;
-		letter-spacing: 2px;
-		font-weight: bold;
-		position: relative;
-		text-transform: uppercase;
-
-		&::before{
-		  content: " ";
-		  position: absolute;
-		  width: 32px;
-		  height: 2px;
-		  background-color: $primaryColor;
-		  bottom: 0;
-
-		}
-	}
-
-
-
-	.advantBlock{
-		display: flex;
-	    flex-direction: column; 
-		padding-bottom: 75px;
-       .advantBlock_1, .advantBlock_2, .advantBlock_3{
-		   position: relative;
-		   &::before{
-			   content: " ";
-			   background-color: #fff;
-			   position: absolute;
-			   width: 169px;
-			   height: 1px;
-			   bottom: -7%;
-			   left: 50%;
-			   transform: translate(-50%);
-		   }
-	   }
-		.advantBlockIcon{
-			width: 60px;
-			height: 45%;
-			padding-top: 55px;
-			margin: auto;
-		}
-		color: #fff;
-		.advantBlockTitle{
-			padding-top: 10px;
-			font-size: 16px;
-			font-weight: bold;	
-			text-align: center;
-			line-height: 30px;	
-			letter-spacing: 2px;
-		}
-
-		.advantBlockSubtitle{
-			padding-top: 15px;
-			margin: auto;
-			max-width: 300px;
-			font-size: 14px;
-			font-weight: 200;	
-			line-height: 30px;	
-			text-align: center;
-		}
-	}
+    .advantBlockSubtitle {
+      padding-top: 15px;
+      margin: auto;
+      max-width: 300px;
+      font-size: 14px;
+      font-weight: 200;
+      line-height: 30px;
+      text-align: center;
+    }
+  }
 }
 
-.form{
-	background-color: $primaryColor;
-	.formAll{
-		max-width: 1299px;
-		padding-bottom: 25px;
-		.formTitle{
-			padding: 17px;
-			font-size: 16px;	
-			font-weight: bold;	
-			letter-spacing: 3px;	
-			line-height: 24px;
-			text-align: center;
-			color: $bgSecondaryColor;
-			text-transform: uppercase;
-		}
-		.formInput{
-			text-align: center;
-			padding-bottom: 15px;
-			width: 299px;
-			margin: auto;
-			input{
-				width: 100%;
-				height: 39px;
-				border-radius: 25px;
-			}
-		}
-		.formBtm{
-			display: block;
-			text-align: center;
-			margin: auto;
-			background-color: $bgSecondaryColor;
-			height: 41px;
-			width: 260px;
-			border-radius: 30px;
-			button{
-				margin: 4% auto;
-				color: #fff;
-			}
-		}
-		
-	}
-	
+.form {
+  background-color: $primaryColor;
+  .formAll {
+    padding-bottom: 25px;
+    .formTitle {
+      padding: 17px;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      line-height: 24px;
+      text-align: center;
+      color: $bgSecondaryColor;
+      text-transform: uppercase;
+    }
+    .formInput {
+      text-align: center;
+      padding-bottom: 15px;
+      width: 299px;
+      margin: auto;
+      input {
+        width: 100%;
+        height: 39px;
+        border-radius: 25px;
+      }
+    }
+    .formBtm {
+      display: block;
+      text-align: center;
+      margin: auto;
+      background-color: $bgSecondaryColor;
+      height: 41px;
+      width: 260px;
+      border-radius: 30px;
+      button {
+        color: #fff;
+      }
+    }
+  }
 }
 
-
-.slick-slide{
-	.wh {
-		min-height: 140px;
-		display: block;
-	}
+.slick-slide {
+  .wh {
+    min-height: 140px;
+    display: block;
+  }
 }
 
-.klientBlockTable{display: none;}
-
-@media (max-width: $containerWidth){
-	.sentence{display: none;}
-	
-	.blockProects{
-		.titleProects{
-			font-size: 16px;
-			padding: 30px 0 15px;
-			&::before{
-             bottom: 15px;
-			}
-		}
-		button{
-			.titleAllProects {
-				font-size: 16px;
-				padding: 0;
-			}
-		}
-	}
-	.proectGalerey{
-		display: none;
-	}
-    .btm_all_proects{
-		display: none;
-	}
+.klientBlockTable {
+  display: none;
 }
 
+@media (max-width: $containerWidth) {
+  .sentence {
+    display: none;
+  }
 
-@media (min-width: $containerWidth){
-	.btmAbsolut{display: block;}
-	.slideshowPrise{display: block;}
-	.klientBlockTable{display: flex;}
-	.sentence{
-		display: flex;
-		justify-content: space-around;
-	}
-	.advantageBtnInput{
-		display: flex;
-		.advantageInput{
-			margin: 0 40px 0 0;
-		}
-	}
-	.scopeBlock{
-		.scopeBlockR{
-			.wrappAll{
-				display: flex;
-				flex-direction: inherit;
-				.wrappRight{
-					padding:0 20px 0  100px;
-				}
-			}
-
-		}
-	}
-	.scopeBlock, .advantageBlock{
-		padding-bottom: 75px;
-		flex-direction: row;
-		.scopeBlockR, .scopeBlockL, .advantageBlockR, .advantageBlockL{
-			min-width: auto;
-			.scopeBlockItem, .advantageBlockItem{
-				padding: 25px 0;
-			}
-			.scopeBtn, .advantageBtn{
-				margin: 0 100px 0 0;
-			}
-		}
-
-
-		.scopeBlockR, .advantageBlockR{
-			padding-left: 230px;
-			.scopeBlockTitle, .advantageBlockTitle{
-				padding: 25px 0;
-				&::before{
-					left: 0;
-				}
-			}
-
-			.advantageAll{
-				flex-direction: column;
-				display: flex;
-				.wrappRight{
-					padding-left: 10%;
-				}
-			}
-		}
-
-		.advantageBlockR{
-			padding-left: 16%;
-
-		}
-
-		.scopeBlockImg{
-			max-width: 347px;
-			left: 0;
-			top: 50%;
-			transform: translate(-50%, -50%);
-			bottom: unset;
-		}
-
-		.advantageBlockImпGirl {
-			max-width: 216px;
-			left: auto;
-			padding-top: 0;
-		}
-
-	}
-
-
-
-	.advantageBlock{
-		padding-top: 60px;
-		flex-direction: row-reverse;
-	 }
-
-
-
-
-
-	.Bestseller{	
-		.titleBestseller{
-			letter-spacing: 3px;
-			font-size: 21px;
-		}
-		.btmAbsolut {
-		  top: o;
-		  bottom: auto;
-		}
-	}
-
-
-
-
-	.btmBestseller2, .btmBestseller3{
-		padding-left: 30px;
-		.titleBestseller{
-			color: grey;
-		}
-	}
-
-   .advantList{
-	   .advantListTitle{
-		   font-size: 21px;
-	   }
-	   .advantBlock{
-		   flex-direction: row; 
-		   padding-top: 7px;;
-		   .advantBlock_1, .advantBlock_2, .advantBlock_3{
-			   padding: 2%;
-			  
-			   &::before{
-				content: " ";
-				background-color: #fff;
-				position: absolute;
-				width: 1px;
-				height: 323px;
-				left: 100%;
-				top: 14%;
-			}
-		   }
-		   .advantBlock_4{
-			
-			padding: 2%;
-		   }
-	   }
-   }
-.form{
-	.formAll{
-		margin: auto;
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		padding: 25px;
-		.formInput{
-			padding: 0 10px 0 0;
-		}
-	}
-}
- 
-
-
-
-
-.klientBlock{
-	padding: 75px 20px;
-	background-color: $bgSecondaryColor;
-	.klientBlockConteiner{
-		margin: auto;
-		max-width: 1299px;
-		.klientBlockTitle{
-			padding-left: 10px;
-			font-weight: normal;
-			letter-spacing: 2px;
-			font-size: 21px;
-			color: $primaryColor;
-			text-transform: uppercase;
-			position: relative;
-			&::before{
-				content: " ";
-				position: absolute;
-				width: 32px;
-				height: 2px;
-				background-color: #c2a060;
-				bottom: 0;
-			}
-		}
-
-		.klientBlockTable{
-			display: flex;
-			justify-content: space-between;
-			width: 100%;
-			tbody{
-				padding-top: 40px;
-				width: 100%;
-
-			}
-			tr{
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				padding: 30px;
-				td{
-				 padding: 7px;
-				  width: 200px ;
-				  img{
-					  width: 100%;
-				  }
-			  }
-			}
-
-		}
-	}
+  .blockProects {
+    .titleProects {
+      font-size: 16px;
+      padding: 30px 0 15px;
+      &::before {
+        bottom: 15px;
+      }
+    }
+    button {
+      .titleAllProects {
+        font-size: 16px;
+        padding: 0;
+      }
+    }
+  }
+  .proectGalerey {
+    display: none;
+  }
+  .btm_all_proects {
+    display: none;
+  }
 }
 
+@media (min-width: $containerWidth) {
+  .btmAbsolut {
+    display: block;
+  }
+  .slideshowPrise {
+    display: block;
+  }
+  .klientBlockTable {
+    display: flex;
+  }
+  .sentence {
+    display: flex;
+    justify-content: space-around;
+  }
+  .advantageBtnInput {
+    display: flex;
+    .advantageInput {
+      margin: 0 40px 0 0;
+    }
+  }
+  .scopeBlock {
+    .scopeBlockR {
+      .wrappAll {
+        display: flex;
+        flex-direction: inherit;
+        .wrappRight {
+          padding: 0 20px 0 100px;
+        }
+      }
+    }
+  }
+  .scopeBlock,
+  .advantageBlock {
+    padding-bottom: 75px;
+    flex-direction: row;
+    .scopeBlockR,
+    .scopeBlockL,
+    .advantageBlockR,
+    .advantageBlockL {
+      min-width: auto;
+      .scopeBlockItem,
+      .advantageBlockItem {
+        padding: 25px 0;
+      }
+      .scopeBtn,
+      .advantageBtn {
+        margin: 0 100px 0 0;
+      }
+    }
 
+    .scopeBlockR,
+    .advantageBlockR {
+      padding-left: 230px;
+      .scopeBlockTitle,
+      .advantageBlockTitle {
+        padding: 25px 0;
+        &::before {
+          left: 0;
+        }
+      }
 
+      .advantageAll {
+        flex-direction: column;
+        display: flex;
+        .wrappRight {
+          padding-left: 10%;
+        }
+      }
+    }
 
+    .advantageBlockR {
+      padding-left: 17%;
+    }
+
+    .scopeBlockImg {
+      max-width: 347px;
+      left: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      bottom: unset;
+    }
+
+    .advantageBlockImпGirl {
+      max-width: 216px;
+      left: auto;
+      padding-top: 0;
+    }
+  }
+
+  .advantageBlock {
+    padding-top: 60px;
+    flex-direction: row-reverse;
+  }
+
+  .Bestseller {
+    .titleBestseller {
+      letter-spacing: 3px;
+      font-size: 21px;
+    }
+    .btmAbsolut {
+      top: o;
+      bottom: auto;
+    }
+  }
+
+  .btmBestseller2,
+  .btmBestseller3 {
+    padding-left: 30px;
+    .titleBestseller {
+      color: grey;
+    }
+  }
+
+  .advantList {
+    .advantListTitle {
+      font-size: 21px;
+    }
+    .advantBlock {
+      flex-direction: row;
+      padding-top: 7px;
+      .advantBlock_1,
+      .advantBlock_2,
+      .advantBlock_3 {
+        padding: 2%;
+        &::before {
+          content: " ";
+          background-color: #fff;
+          position: absolute;
+          width: 1px;
+          height: 323px;
+          left: 100%;
+          top: 14%;
+        }
+      }
+      .advantBlock_4 {
+        padding: 2%;
+      }
+    }
+  }
+  .form {
+    .formAll {
+      margin: auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 25px;
+      .formInput {
+        padding: 0 10px 0 0;
+      }
+    }
+  }
+
+  .klientBlock {
+    padding: 75px 0;
+    background-color: $bgSecondaryColor;
+    .klientBlockConteiner {
+      .klientBlockTitle {
+        padding-left: 10px;
+        font-weight: normal;
+        letter-spacing: 2px;
+        font-size: 21px;
+        color: $primaryColor;
+        text-transform: uppercase;
+        position: relative;
+        &::before {
+          content: " ";
+          position: absolute;
+          width: 32px;
+          height: 2px;
+          background-color: #c2a060;
+          bottom: 0;
+        }
+      }
+
+      .klientBlockTable {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        tbody {
+          padding-top: 40px;
+          width: 100%;
+        }
+        tr {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 30px;
+          td {
+            padding: 7px;
+            width: 200px;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
 }
-
-
-

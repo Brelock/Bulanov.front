@@ -1,6 +1,26 @@
-/* Controls
----------------------------------------------------------------------- */
+.click-for-video {
+  cursor: pointer;
+}
 
+.youtube {
+  position: absolute;
+  width: 640px;
+  height: 480px;
+  z-index: 1000;
+  top: 0;
+  bottom: 0;
+}
+
+div.youtube {
+  display: none;
+}
+
+.imgFonsVideo {
+  img {
+    max-width: 419px;
+    max-height: 236px;
+  }
+}
 .catalogConteiner {
   padding-bottom: 50px;
   .container {
@@ -13,7 +33,6 @@
     font-size: 21px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    // padding-left: 20px;
     position: relative;
     &::before {
       content: " ";
@@ -22,7 +41,6 @@
       background: $primaryColor;
       position: absolute;
       bottom: -7px;
-      // left: 20px;
     }
   }
 }
@@ -99,33 +117,35 @@
   padding: 2px;
   width: 33%;
   position: relative;
-  img {
-    width: 100%;
-  }
-}
-
-
-.videoConteiner{
-  .mix{
-    .blockVideo{
-      padding-bottom: 15px;
-      width: 33%;
+  &:hover {
+    .imgFonsVideo {
+      img {
+        position: absolute;
+        width: 450px;
+        height: 300px;
+      }
     }
   }
 }
 
-.blockVideoTitle{
+.videoConteiner {
+  .mix {
+    .blockVideo {
+      box-sizing: border-box;
+      padding-bottom: 15px;
+    }
+  }
+}
+
+.blockVideoTitle {
   padding-left: 20px;
-  color: #3F6299;
+  color: #f2f2f2;
   font-size: 14px;
   letter-spacing: 2px;
   font-weight: 100;
   min-width: 415px;
-  border-bottom: 1px solid #ccc;
-  text-align: center;
+  text-align: left;
 }
-
-
 
 @media (max-width: $containerWidthLaptop) {
   .controls {
@@ -162,13 +182,11 @@
   }
 }
 
-
-@media (max-width: 750px){
-  .otherProjectsItem{
+@media (max-width: 750px) {
+  .otherProjectsItem {
     flex-direction: column;
-    .itemBlock{
+    .itemBlock {
       width: 100%;
     }
   }
-
 }

@@ -1,133 +1,126 @@
-.mainFooter{
-	background-color: $bgHeaderColor;
-	// padding: 50px 0 0 0;
-	color: #F2F2F2;
+.mainFooter {
+  background-color: $bgHeaderColor;
+  color: #f2f2f2;
 }
-.conteinerFooter{
-	padding: 50px 0 50px;
-	display: flex;
-	flex-direction: column;
-	padding-left: 40px;
+.conteinerFooter {
+  display: flex;
+  flex-direction: column;
+  min-height: 236px;
+  margin: 0 auto;
+  letter-spacing: 1px;
+  .footerBlockContactTitle,
+  .footerWorkInfo {
+    text-indent: 0;
+    padding-top: 10px;
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 2px;
+  }
 
-	max-width: 1299px;
-	margin: 0 auto;
-	letter-spacing: 1px;
-	p{
-		padding-top: 10px;
-	}
-	.footerBlockTown{
-		.town{
-			font-size: 16px;
-			font-weight: 100;
-
-		}
-		.mail{
-			font-size: 16px;
-			font-weight: 100;
-		}
-	}
-	.footerBlockTime, .footerBlockPhone, .footerBlockSocial{
-		padding-top: 30px;
-		.timeWork, .contacktPhone{
-			font-size: 21px;
-		}
-		.timeTitle{
-			font-weight: 100;
-			font-size: 14;
-		}
-
-	}
-	.footerBlockSocial{
-		justify-content: space-around;
-		width: 155px;
-		display: flex;
-		.socialFacbook, .socialInstogram, .socialMail{
-			width: 40px;
-			height: 40px;
-			border-radius: 50%;
-			background-color: $primaryColor;
-			img{
-				width: 20px;
-				height: 20px;
-				margin: 30% auto;
-			}
-		}
-	}
+  .footerWorkInfo {
+    font-size: 18px;
+  }
+  .footerBlockContact {
+    padding-top: 20px;
+  }
+  .footerBlockSocial {
+    padding: 20px 0;
+    justify-content: space-around;
+    width: 155px;
+    display: flex;
+    .socialFacbook,
+    .socialInstogram,
+    .socialMail {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: $primaryColor;
+      img {
+        width: 20px;
+        height: 20px;
+        margin: 30% auto;
+      }
+    }
+  }
 }
-      .bottomFooter{
-		  background-color: $bgSecondaryColor;
-		  min-height: 70px;
-		  
-		  display: flex;
-	  }
-		.bottomFooterBlock{
-			font-size: 14px;
-			font-weight: 100;
-			text-align: center;
-			flex-direction: column;
-			justify-content: space-evenly;
-			display: flex;
-			a {
-				color: $footerFontColor;
-				display: flex;
-				flex-direction: column;
-                 align-items: center;
-			}
-			.developedBy{
-				// font-weight: 900;
-				// font-size: 21px;
-				// padding-left: 10px;
-				// text-align: center;
-				align-items: center;
-				display: flex;
 
-				img{
-					margin-left: 10px;
-					width: 20px;
-					height: 20px;
-				}
-			}
-		}
+.bottomFooter {
+  background-color: $bgSecondaryColor;
+  min-height: 70px;
+  display: flex;
+}
 
+.bottomFooterBlock {
+  font-size: 14px;
+  font-weight: 100;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  display: flex;
+  a {
+    color: $footerFontColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .developedBy {
+    align-items: center;
+    display: flex;
 
-@media (min-width: $containerWidth){
-	.conteinerFooter{
-	flex-direction: row;
-	justify-content: space-between;
-	padding-left: 0;
+    img {
+      margin-left: 10px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
 
-	p{
-		padding-top: 30px;
-	}
-	.footerBlockTown, .footerBlockTime, .footerBlockPhone, .footerBlockSocial {
-		padding: 0 10px ;
-       .titlePhone{
-		   font-weight: 100;
-	   }
-	}
-	.footerBlockSocial{
-		padding-top: 35px;
-		width: 200px;
-		.socialFacbook, .socialInstogram, .socialMail{
-			width: 50px;
-			height: 50px;
-		}
-	}
-	}
+@media (min-width: $containerWidth) {
+  .conteinerFooter {
+    align-items: center;
+  }
 
- .bottomFooterBlock{
-		 display: flex;
-		 flex-direction: row;
-		 justify-content: space-between;
-		 align-items: center;
-		 width: 1299px;
+  .footerBlockContact {
+    padding-top: 0;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .conteinerFooter {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 0;
+    .footerBlockSocial {
+      padding: 0 10px;
+      .titlePhone {
+        font-weight: 100;
+      }
+    }
+    .footerBlockSocial {
+      padding-top: 35px;
+      width: 200px;
+      .socialFacbook,
+      .socialInstogram,
+      .socialMail {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
 
-         .developedBy{
+  .bottomFooterBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1299px;
 
-			 img{
-				 width: 20px;
-				 height: 20px;
-			 }
-		 }
- }
+    .developedBy {
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
 }

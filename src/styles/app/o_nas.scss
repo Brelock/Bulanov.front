@@ -1,21 +1,27 @@
-.o_nasBaner{
-    padding-top: 30px;
+.o_nasBaner {
+  padding-top: 30px;
 }
-.infoTitleBlockO_nas{
-    font-size: 21px;
-    color: $primaryColor;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    padding: 10px 0;
-    font-weight: 800;
+.infoTitleBlockO_nas {
+  font-size: 21px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  padding: 10px 0;
+  font-weight: 800;
 }
-.textO_nas{
-    color: #F2F2F2;
+
+.blocO_nas {
+  p {
+    color: #f2f2f2;
     font-weight: 100;
     line-height: 30px;
-
-}
-
-p {
     text-indent: 1.5em;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $primaryColor;
+  }
 }

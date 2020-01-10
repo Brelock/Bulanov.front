@@ -15,8 +15,20 @@ var glob = {
 	scrollTopButton: null,
 }
 
+
+$('.click-for-video').click(function() {
+	this.style.display = 'none';
+	$('div.youtube').css('display', 'block');
+	$('div.youtube').css('display', 'block');
+	$('iframe.youtube').prop('src', 'https://www.youtube.com/embed/dQw4w9WgXcQ?;autoplay=1&;controls=0&;showinfo=0');
+  });
+
+
+
 // =================
+
 @@include('frames/globalFunctions.js')
+
 // ===============
 
 
@@ -119,12 +131,12 @@ $(document).ready(function() {
 
 	// ----------Scroll-to Section---------------
 	
-	/*$('body').on('click', 'article.story-item', function() {
+	// $('body').on('click', 'article.story-item', function() {
 		
-		$('html, body').animate({
-			scrollTop: $("#" + $(this).attr('data-story-id') ).offset().top
-		}, 500);
-	})*/
+	// 	$('html, body').animate({
+	// 		scrollTop: $("#" + $(this).attr('data-story-id') ).offset().top
+	// 	}, 500);
+	// })
 
 	// ---------- Sticky block---------------
 	/*var stickyAsideBlock = document.querySelector('aside.sticky');

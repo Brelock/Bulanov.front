@@ -72,7 +72,7 @@ article, .sectionBlock, [class^="sectionBlockColumn_"] {
   
   & > div,
   & > article,
-  & > aside, {
+  & > aside {
     box-sizing: border-box;
     padding: $articleMarginMobile / 2;
   }
